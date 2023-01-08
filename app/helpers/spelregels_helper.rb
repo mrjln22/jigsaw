@@ -1,0 +1,2 @@
+module SpelregelsHelper
+end
