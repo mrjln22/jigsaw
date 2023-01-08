@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+
+  </head>
   <body>
+    <%= render 'shared/navbar'%>
+    <div>
+    <body style="background-image: url(<%= asset_path 'jigsaw_large' %>);">
+    <div class="container-page">
     <%= yield %>
-    <div class="footer">
-       This footer is made with <i class="fas fa-heart"></i> by MRJLN
-    </div>
 </div>
   </body>
+    </div>
+ <%= render 'shared/footer'%>
 </html>
